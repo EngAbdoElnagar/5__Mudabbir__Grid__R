@@ -1,0 +1,53 @@
+@media (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    grid-template-columns: 100px 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "nav head head"
+      "nav sec__1 sec__1"
+      "nav sec__2 sec__6"
+      "nav sec__3 sec__3"
+      "nav sec__4 sec__7"
+      "nav sec__5 sec__8";
+    gap: 20px;
+  }
+  .Navigation {
+    display: flex;
+    .nav__text {
+      display: none;
+    }
+  }
+  .SummaryCards {
+    flex-direction: row;
+    justify-content: space-between;
+    .SummaryCard__card {
+      width: 32%;
+    }
+  }
+}
+@media (min-width: 1280px) and (max-width: 2000px) {
+  .container {
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: 220px 1fr 1fr 1fr;
+    grid-template-areas:
+      "nav head head head"
+      "nav sec__1 sec__1 sec__1"
+      "nav sec__2 sec__3 sec__3"
+      "nav sec__4 sec__3 sec__3"
+      "nav sec__5 sec__6 sec__8"
+      "nav sec__5 sec__7 sec__8";
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+  .Navigation {
+    display: flex;
+  }
+  .SummaryCards {
+    flex-direction: row;
+    justify-content: space-between;
+    .SummaryCard__card {
+      width: 32%;
+    }
+  }
+}
